@@ -1,0 +1,121 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+    letter-spacing: 1px;
+    font-size: 2.2em;
+}
+
+form {
+    background: #fff;
+    max-width: 500px;
+    margin: 30px auto 30px auto;
+    padding: 30px 25px 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select {
+    padding: 12px;
+    margin: 0;
+    border: 1px solid #bfc9d1;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1em;
+    background: #f7fafc;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    background: #fff;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.06);
+}
+
+button:hover {
+    background-color: #fd5000;
+    transform: translateY(-2px) scale(1.03);
+}
+
+table {
+    width: 95%;
+    margin: 0 auto 30px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+    font-size: 1em;
+}
+
+th, td {
+    border-bottom: 1px solid #e0eafc;
+    padding: 16px 14px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 600;
+    border-right: 1px solid #388e3c;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) td {
+    background-color: #f2f6fa;
+}
+
+tr:hover td {
+    background-color: #eaf6f0;
+    transition: background 0.2s;
+}
+
+/* Responsive para tablas en móviles */
+@media (max-width: 700px) {
+    form, table {
+        width: 98%;
+        padding: 10px;
+    }
+    th, td {
+        font-size: 0.95em;
+        padding: 10px 5px;
+    }
+}
