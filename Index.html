@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Control de Mantenimiento</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS para estilos -->
+</head>
+<body>
+
+<h1>Sistema de Control de Mantenimiento</h1>
+
+<!-- Formulario para registrar el mantenimiento de equipos -->
+<form id="equipmentForm">
+    <input type="text" id="Nombre_del_Equipo" placeholder="Nombre del Equipo" required> <!-- Campo para el nombre del equipo -->
+    <input type="text" id="Número_de_Serie" placeholder="Número de Serie" required> <!-- Campo para el número de serie -->
+    <input type="date" id="Fecha_de_Mantenimiento" placeholder="Fecha de Mantenimiento" required> <!-- Campo para la fecha de mantenimiento -->
+    <input type="text" id="Tipo_de_Mantenimiento" placeholder="Tipo de Mantenimiento" required> <!-- Campo para el tipo de mantenimiento -->
+    <button type="submit">Registrar Mantenimiento</button> <!-- Botón para enviar el formulario -->
+</form>
+
+<!-- Tabla para mostrar el historial de mantenimiento registrado -->
+<table id="maintenanceTable">
+    <thead>
+        <tr>
+            <th>Nombre del Equipo</th>
+            <th>N° de Serie</th>
+            <th>Fecha de Mantenimiento</th>
+            <th>Tipo de Mantenimiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Las filas de la tabla se agregarán aquí dinámicamente -->
+    </tbody>
+</table>
+
+
+<script type="module">
+  // Importa las funciones necesarias de Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+  import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-database.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
+
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCxRP4rNfVJRzU8YLrMu51Os9-PfY60Tqk",
+    authDomain: "mantenimiento-a-equipo.firebaseapp.com",
+    databaseURL: "https://mantenimiento-a-equipo-default-rtdb.firebaseio.com",
+    projectId: "mantenimiento-a-equipo",
+    storageBucket: "mantenimiento-a-equipo.firebasestorage.app",
+    messagingSenderId: "840988363789",
+    appId: "1:840988363789:web:47bf961f1ad221529d1944",
+    measurementId: "G-NFXY6LLJMR"
+  };
+
+  // Inicializa Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getDatabase(app);
+
+  // Evento que se activa al enviar el formulario
+  document.getElementById('equipmentForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    // Obtiene los valores de los campos del formulario
+    const Nombre_del_Equipo = document.getElementById('Nombre_del_Equipo').value;
+    const Número_de_Serie = document.getElementById('Número_de_Serie').value;
+    const Fecha_de_Mantenimiento = document.getElementById('Fecha_de_Mantenimiento').value;
+    const Tipo_de_Mantenimiento = document.getElementById('Tipo_de_Mantenimiento').value;
+
+    // Guarda los datos en Firebase Realtime Database
+    try {
+      await push(ref(db, 'mantenimientos'), {
+        Nombre_del_Equipo,
+        Número_de_Serie,
+        Fecha_de_Mantenimiento,
+        Tipo_de_Mantenimiento
+      });
+      // Agrega la fila a la tabla localmente
+      const tableBody = document.getElementById('maintenanceTable').querySelector('tbody');
+      const newRow = tableBody.insertRow();
+      newRow.insertCell(0).textContent = Nombre_del_Equipo;
+      newRow.insertCell(1).textContent = Número_de_Serie;
+      newRow.insertCell(2).textContent = Fecha_de_Mantenimiento;
+      newRow.insertCell(3).textContent = Tipo_de_Mantenimiento;
+      document.getElementById('equipmentForm').reset();
+    } catch (error) {
+      alert('Error al guardar en Firebase: ' + error.message);
+    }
+  });
+</script>
+</body>
+</html>
