@@ -122,7 +122,7 @@ table {
 
 /* Celdas de la tabla */
 th, td {
-    border-bottom: 1px solid #e3e7ed; /* Línea inferior */
+    border-bottom: 1px solid #000000; /* Línea inferior */
     padding: 18px 14px; /* Relleno */
     text-align: center; /* Centrado */
     vertical-align: middle; /* Centrado vertical */
