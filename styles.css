@@ -70,7 +70,7 @@ input::placeholder, select:invalid {
 
 /* Botón principal */
 button {
-    background: linear-gradient(90deg, #3949ab 0%, #1976d2 100%); /* Degradado azul */
+    background: linear-gradient(90deg, #1976d2 100%); /* Degradado azul */
     color: #fff; /* Texto blanco */
     padding: 13px; /* Relleno */
     border: none; /* Sin borde */
