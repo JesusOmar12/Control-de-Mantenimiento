@@ -1,94 +1,114 @@
-/* Estilos generales para el cuerpo de la página */
+/* Estilo profesional y corporativo mejorado */
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    background: linear-gradient(120deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
+    color: #222;
 }
 
 h1 {
     text-align: center;
-    margin-top: 30px;
-    color: #333;
-    letter-spacing: 1px;
-    font-size: 2.2em;
+    margin-top: 40px;
+    color: #1a237e;
+    letter-spacing: 1.5px;
+    font-size: 2.4em;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(26,35,126,0.06);
 }
 
 form {
     background: #fff;
-    max-width: 500px;
-    margin: 30px auto 30px auto;
-    padding: 30px 25px 30px 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+    max-width: 480px;
+    margin: 40px auto 32px auto;
+    padding: 36px 32px 32px 32px;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(44, 62, 80, 0.10);
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
+    border: 1px solid #e3e7ed;
+}
+
+form label {
+    font-weight: 500;
+    color: #3949ab;
+    margin-bottom: 4px;
+    font-size: 1em;
+    letter-spacing: 0.2px;
 }
 
 input, select {
-    padding: 12px;
-    margin: 0;
-    border: 1px solid #d1c9bf;
-    border-radius: 8px;
-    width: 100%;
-    font-size: 1em;
-    background: #f7fafc;
-    transition: border-color 0.2s;
+    padding: 13px 14px;
+    border: 1.5px solid #b0bec5;
+    border-radius: 7px;
+    font-size: 1.05em;
+    background: #f8fafc;
+    transition: border-color 0.2s, box-shadow 0.2s;
     box-sizing: border-box;
-    width: 100%;
 }
 
 input:focus, select:focus {
-    border-color: #da4e17;
+    border-color: #3949ab;
     outline: none;
     background: #fff;
+    box-shadow: 0 0 0 2px #c5cae9;
+}
+
+input::placeholder, select:invalid {
+    color: #b0bec5;
+    opacity: 1;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px;
+    background: linear-gradient(90deg, #3949ab 0%, #1976d2 100%);
+    color: #fff;
+    padding: 13px;
     border: none;
-    border-radius: 8px;
+    border-radius: 7px;
     cursor: pointer;
-    margin-top: 10px;
-    font-size: 1.1em;
-    font-weight: bold;
-    transition: background 0.2s, transform 0.1s;
-    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.06);
+    margin-top: 12px;
+    font-size: 1.12em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
 }
 
 button:hover {
-    background-color: #fd5000;
-    transform: translateY(-2px) scale(1.03);
+    background: linear-gradient(90deg, #1976d2 0%, #3949ab 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10);
 }
 
 table {
-    width: 95%;
-    margin: 0 auto 30px auto;
+    width: 96%;
+    margin: 0 auto 36px auto;
     border-collapse: separate;
     border-spacing: 0;
     background: #fff;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
-    font-size: 1em;
+    box-shadow: 0 6px 32px rgba(44, 62, 80, 0.10);
+    font-size: 1.04em;
+    border: 1px solid #e3e7ed;
 }
 
 th, td {
-    border-bottom: 1px solid #e0eafc;
-    padding: 16px 14px;
+    border-bottom: 1px solid #e3e7ed;
+    padding: 18px 14px;
     text-align: center;
     vertical-align: middle;
 }
 
 th {
-    background-color: #4CAF50;
-    color: white;
-    font-weight: 600;
-    border-right: 1px solid #388e3c;
+    background: linear-gradient(90deg, #3949ab 0%, #1976d2 100%);
+    color: #fff;
+    font-weight: 700;
+    border-right: 1px solid #283593;
+    letter-spacing: 0.5px;
 }
 
 th:last-child, td:last-child {
@@ -100,22 +120,28 @@ tr:last-child td {
 }
 
 tr:nth-child(even) td {
-    background-color: #f2f6fa;
+    background-color: #f4f7fb;
 }
 
 tr:hover td {
-    background-color: #eaf6f0;
+    background-color: #e3eafc;
     transition: background 0.2s;
 }
 
-/* Responsive para tablas en móviles */
+/* Responsive para móviles */
 @media (max-width: 700px) {
     form, table {
-        width: 98%;
-        padding: 10px;
+        width: 99%;
+        padding: 8px;
     }
     th, td {
-        font-size: 0.95em;
+        font-size: 0.97em;
         padding: 10px 5px;
     }
-}
+    form {
+        padding: 18px 8px 18px 8px;
+    }
+        h1 {
+            font-size: 1.4em;
+        }
+    }
