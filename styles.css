@@ -57,10 +57,10 @@ input, select {
 
 /* Efecto al enfocar los campos */
 input:focus, select:focus {
-    border-color: #dfe2f0; /* Borde azul */
+    border-color: #3a55ce; /* Borde azul */
     outline: none; /* Sin contorno adicional */
     background: #fff; /* Fondo blanco */
-    box-shadow: 0 0 0 2px #c5cae9; /* Sombra azul clara */
+    box-shadow: 0 0 0 2px #70aacc; /* Sombra azul clara */
 }
 
 /* Estilo para los placeholders y selects inválidos */
