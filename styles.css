@@ -47,7 +47,8 @@ form label {
 /* Campos de entrada y selectores */
 input, select {
     padding: 13px 14px; /* Relleno interno */
-    border: 1.5px solid #b0bec5; /* Borde gris */
+    background: #f8fafc; /* Fondo claro */
+    border: 1.5px solid ; /* Borde gris */
     border-radius: 7px; /* Bordes redondeados */
     font-size: 1.05em; /* Tamaño de fuente */
     background: #f8fafc; /* Fondo claro */
@@ -97,7 +98,7 @@ table {
     margin: 0 auto 30px auto; /* Centrado y separación inferior */
     border-collapse: separate; /* Bordes separados */
     border-spacing: 0; /* Sin espacio entre celdas */
-    background: #fdfdfde5; /* Fondo blanco */
+    background: #ffffffe5; /* Fondo blanco */
     border-radius: 14px; /* Bordes redondeados */
     overflow: hidden; /* Oculta desbordes */
     box-shadow: 0 6px 32px #2a2d31; /* Sombra */
