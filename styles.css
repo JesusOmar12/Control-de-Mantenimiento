@@ -100,7 +100,7 @@ table {
     background: #fdfdfde5; /* Fondo blanco */
     border-radius: 14px; /* Bordes redondeados */
     overflow: hidden; /* Oculta desbordes */
-    box-shadow: 0 6px 32px rgb(192, 160, 160); /* Sombra */
+    box-shadow: 0 6px 32px #2a2d31; /* Sombra */
     font-size: 1.04em; /* Tamaño de fuente */
     border: 3px solid #2a2d31; /* Borde suave */
 }
