@@ -46,7 +46,7 @@ label[for="nombre"], label[for="fecha"], label[for="tipo"] {
 input[type="text"], input[type="date"], select {
     padding: 15px 16px;
     background: #ffffff;
-    border: 2px solid #90caf9;
+    border: 2px solid #50585f;
     border-radius: 8px;
     font-size: 1.1em;
     transition: border-color 0.3s, box-shadow 0.3s;
