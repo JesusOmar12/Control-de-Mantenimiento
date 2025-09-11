@@ -116,7 +116,7 @@ button:hover {
 #maintenanceTable th,
 #maintenanceTable td {
     border: 2px solid #283593; /* Borde azul */
-    padding: 16px; /* Espaciado interno */
+    padding: 6px; /* Espaciado interno */
     text-align: center; /* Centra el texto */
     vertical-align: middle; /* Centra verticalmente */
     font-size: 1em; /* Tamaño de fuente */
