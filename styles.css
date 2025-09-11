@@ -30,7 +30,7 @@ form {
 input, select {
     padding: 12px;
     margin: 0;
-    border: 1px solid #bfc9d1;
+    border: 1px solid #d1c9bf;
     border-radius: 8px;
     width: 100%;
     font-size: 1em;
@@ -41,7 +41,7 @@ input, select {
 }
 
 input:focus, select:focus {
-    border-color: #4CAF50;
+    border-color: #da4e17;
     outline: none;
     background: #fff;
 }
