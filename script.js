@@ -66,12 +66,12 @@ form.addEventListener('submit', function(e) {
     };
     registros.push(registro);
     localStorage.setItem('mantenimientos', JSON.stringify(registros));
-    renderTable();
+    renderTable(); // Solo se llama una vez aquí
     form.reset();
 });
 
 function renderTable() {
-    tableBody.innerHTML = '';
+    tableBody.innerHTML = ''; // Limpia la tabla antes de agregar filas nuevas
     registros.forEach((reg, idx) => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
