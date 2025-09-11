@@ -81,7 +81,6 @@ function renderTable() {
     registros.forEach((reg, idx) => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
-            <td>${idx + 1}</td>
             <td>${reg.nombre}</td>
             <td>${reg.serie}</td>
             <td>${reg.fecha}</td>
