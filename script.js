@@ -71,7 +71,7 @@ form.addEventListener('submit', function(e) {
 });
 
 function renderTable() {
-    tableBody.innerHTML = ''; // Limpia la tabla antes de agregar filas nuevas
+    tableBody.innerHTML = ''; // Limpia el cuerpo de la tabla antes de agregar filas nuevas
     registros.forEach((reg, idx) => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
