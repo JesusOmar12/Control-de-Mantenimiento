@@ -130,7 +130,7 @@ th, td {
 
 /* Encabezados de la tabla */
 th {
-    background: linear-gradient(90deg, #5b5e6e 0%, #d27219 100%); /* Degradado gris a naranja */
+    background: linear-gradient(90deg, #d27219 100%); /* Degradado gris a naranja */
     color: #fff; /* Texto blanco */
     font-weight: 700; /* Negrita */
     border-right: 1px solid #283593; /* Línea derecha */
