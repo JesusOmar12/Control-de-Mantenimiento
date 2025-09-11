@@ -116,10 +116,10 @@ button:hover {
 #maintenanceTable th,
 #maintenanceTable td {
     border: 2px solid #283593; /* Borde azul */
-    padding: 16px; /* Espaciado interno */
+    padding: 6px 4px; /* Espaciado interno más pequeño */
     text-align: center; /* Centra el texto */
     vertical-align: middle; /* Centra verticalmente */
-    font-size: 1em; /* Tamaño de fuente */
+    font-size: 0.95em; /* Tamaño de fuente ligeramente más pequeño */
     word-break: break-word; /* Rompe palabras largas */
     background-color: #f3f4f6; /* Fondo gris claro */
 }
