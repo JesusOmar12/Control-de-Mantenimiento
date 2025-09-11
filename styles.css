@@ -78,7 +78,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(90deg, #1976d2 0%, #3949ab 100%);
+    background: linear-gradient(90deg, #1976d2 0%, #f18101 100%);
     transform: translateY(-2px) scale(1.04);
     box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10);
 }
