@@ -1,4 +1,3 @@
-
 // Importa las funciones necesarias de Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-database.js";
@@ -49,3 +48,50 @@ document.getElementById('equipmentForm').addEventListener('submit', async functi
         alert('Error al guardar en Firebase: ' + error.message);
     }
 });
+
+const form = document.getElementById('equipmentForm');
+const tableBody = document.querySelector('#maintenanceTable tbody');
+
+// Cargar registros guardados al iniciar
+let registros = JSON.parse(localStorage.getItem('mantenimientos')) || [];
+renderTable();
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const registro = {
+        nombre: document.getElementById('Nombre_del_Equipo').value,
+        serie: document.getElementById('Número_de_Serie').value,
+        fecha: document.getElementById('Fecha_de_Mantenimiento').value,
+        tipo: document.getElementById('Tipo_de_Mantenimiento').value
+    };
+    registros.push(registro);
+    localStorage.setItem('mantenimientos', JSON.stringify(registros));
+    renderTable();
+    form.reset();
+});
+
+function renderTable() {
+    tableBody.innerHTML = '';
+    registros.forEach((reg, idx) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${reg.nombre}</td>
+            <td>${reg.serie}</td>
+            <td>${reg.fecha}</td>
+            <td>${reg.tipo}</td>
+            <td>
+                <button class="eliminar" data-idx="${idx}" title="Eliminar registro">🗑️</button>
+            </td>
+        `;
+        tableBody.appendChild(tr);
+    });
+    // Asignar eventos a los botones de eliminar
+    document.querySelectorAll('.eliminar').forEach(btn => {
+        btn.onclick = function() {
+            const idx = this.getAttribute('data-idx');
+            registros.splice(idx, 1);
+            localStorage.setItem('mantenimientos', JSON.stringify(registros));
+            renderTable();
+        };
+    });
+}
