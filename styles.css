@@ -103,7 +103,7 @@ table {
     overflow: hidden; /* Oculta desbordes */
     box-shadow: 0 6px 32px rgb(247, 247, 247); /* Sombra */
     font-size: 1.04em; /* Tamaño de fuente */
-    border: 3px solid #e3e7ed; /* Borde suave */
+    border: 3px solid #2a2d31; /* Borde suave */
 }
 
 /* Asegura que todas las celdas y encabezados tengan el mismo tamaño y alineación */
@@ -130,7 +130,7 @@ th, td {
 
 /* Encabezados de la tabla */
 th {
-    background: linear-gradient(90deg, #d27219 100%); /* Degradado gris a naranja */
+    background: linear-gradient(90deg, #d27219 100%); /* Degradado naranja */
     color: #fff; /* Texto blanco */
     font-weight: 700; /* Negrita */
     border-right: 1px solid #283593; /* Línea derecha */
