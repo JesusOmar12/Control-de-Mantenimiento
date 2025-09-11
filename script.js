@@ -71,7 +71,7 @@ form.addEventListener('submit', function(e) {
 });
 
 function renderTable() {
-    tableBody.innerHTML = '';
+    tableBody.innerHTML = ''; // Limpia el cuerpo de la tabla antes de agregar filas nuevas
     if (registros.length === 0) {
         const tr = document.createElement('tr');
         tr.innerHTML = `<td colspan="6" style="color:#888;">No hay registros de mantenimiento.</td>`;
