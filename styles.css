@@ -241,15 +241,3 @@ button:hover {
     }
 }
 
-.toggle-link {
-            color: #1976d2;
-            text-align: center;
-            display: block;
-            margin-top: 7px;
-            cursor: pointer;
-            text-decoration: underline;
-            font-size: 0.98em;
-        }
-        .toggle-link:hover {
-            color: #050505;
-        }
