@@ -1,156 +1,156 @@
 /* Estilos generales del cuerpo de la página */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(120deg, #2c4e81 0%, #618acc 100%);
-    min-height: 100vh;
-    color: #222;
+    font-family: 'Segoe UI', Arial, sans-serif; /* Fuente principal */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    background: linear-gradient(120deg, #2c4e81 0%, #618acc 100%); /* Fondo degradado */
+    min-height: 100vh; /* Altura mínima de la ventana */
+    color: #222; /* Color de texto principal */
 }
 
 /* Título principal */
 h1 {
-    text-align: center;
-    margin-top: 40px;
-    color: #fff;
-    letter-spacing: 1.5px;
-    font-size: 2.4em;
-    font-weight: 700;
+    text-align: center; /* Centra el texto */
+    margin-top: 40px; /* Espacio superior */
+    color: #fff; /* Color del texto */
+    letter-spacing: 1.5px; /* Espaciado entre letras */
+    font-size: 2.4em; /* Tamaño de fuente grande */
+    font-weight: 700; /* Negrita */
 }
 
 /* Contenedor del formulario */
 form {
-    background: #fff;
-    max-width: 500px;
-    margin: 30px auto;
-    padding: 30px 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    border: 1px solid #424549;
+    background: #fff; /* Fondo blanco */
+    max-width: 500px; /* Ancho máximo */
+    margin: 30px auto; /* Centrado y espacio vertical */
+    padding: 30px 25px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08); /* Sombra */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Columnas */
+    gap: 15px; /* Espacio entre elementos */
+    border: 1px solid #424549; /* Borde gris */
 }
 
 /* Etiquetas del formulario */
 form label,
 label[for="nombre"], label[for="fecha"], label[for="tipo"] {
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 6px;
-    font-size: 1.1em;
-    letter-spacing: 0.3px;
+    font-weight: 600; /* Negrita */
+    color: #333; /* Color de texto */
+    margin-bottom: 6px; /* Espacio inferior */
+    font-size: 1.1em; /* Tamaño de fuente */
+    letter-spacing: 0.3px; /* Espaciado entre letras */
 }
 
 /* Campos de entrada y selectores */
 input[type="text"], input[type="date"], select {
-    padding: 15px 16px;
-    background: #ffffff;
-    border: 2px solid #50585f;
-    border-radius: 8px;
-    font-size: 1.1em;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    box-sizing: border-box;
+    padding: 15px 16px; /* Espaciado interno */
+    background: #ffffff; /* Fondo blanco */
+    border: 2px solid #50585f; /* Borde gris */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1.1em; /* Tamaño de fuente */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave */
+    box-sizing: border-box; /* Incluye el borde en el tamaño */
 }
 
 input[type="text"]:focus, input[type="date"]:focus, select:focus {
-    border-color: #1976d2;
-    outline: none;
-    box-shadow: 0 0 8px rgba(25, 118, 210, 0.2);
+    border-color: #1976d2; /* Borde azul al enfocar */
+    outline: none; /* Sin contorno extra */
+    box-shadow: 0 0 8px rgba(25, 118, 210, 0.2); /* Sombra azul */
 }
 
 /* Estilo para los placeholders y selects inválidos */
 input[type="text"]::placeholder, input[type="date"]::placeholder, select:invalid {
-    color: #636363;
-    opacity: 1;
+    color: #636363; /* Color gris para el placeholder */
+    opacity: 1; /* Opacidad total */
 }
 
 /* Botón principal */
 button {
-    background: linear-gradient(90deg, #1976d2 100%);
-    color: #fff;
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 14px;
-    font-size: 1.15em;
-    font-weight: 600;
-    letter-spacing: 0.6px;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-    box-shadow: 0 3px 15px rgba(44, 62, 80, 0.1);
+    background: linear-gradient(90deg, #1976d2 100%); /* Fondo degradado azul */
+    color: #fff; /* Texto blanco */
+    padding: 14px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano */
+    margin-top: 14px; /* Espacio superior */
+    font-size: 1.15em; /* Tamaño de fuente */
+    font-weight: 600; /* Negrita */
+    letter-spacing: 0.6px; /* Espaciado entre letras */
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s; /* Transiciones suaves */
+    box-shadow: 0 3px 15px rgba(44, 62, 80, 0.1); /* Sombra */
 }
 
 /* Efecto hover para el botón */
 button:hover {
-    background: linear-gradient(90deg, #1565c0 100%);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 5px 20px rgb(226, 124, 8);
+    background: linear-gradient(90deg, #1565c0 100%); /* Cambia el degradado */
+    transform: translateY(-3px) scale(1.05); /* Eleva y agranda el botón */
+    box-shadow: 0 5px 20px rgb(226, 124, 8); /* Sombra naranja */
 }
 
 /* Botón de eliminar */
 .eliminar {
-    background: none;
-    border: none;
-    color: #d32f2f;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: color 0.2s;
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    color: #d32f2f; /* Rojo */
+    font-size: 1.2em; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de mano */
+    transition: color 0.2s; /* Transición de color */
 }
 .eliminar:hover {
-    color: #b71c1c;
+    color: #b71c1c; /* Rojo más oscuro al pasar el mouse */
 }
 
 /* Tabla de registros */
 #maintenanceTable {
-    width: 95%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    font-size: 1.05em;
-    border: 2px solid #283593;
+    width: 95%; /* Ancho de la tabla */
+    margin: 20px auto; /* Centrado y espacio vertical */
+    border-collapse: collapse; /* Sin separación entre celdas */
+    background: #fff; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Sombra */
+    font-size: 1.05em; /* Tamaño de fuente */
+    border: 2px solid #283593; /* Borde azul */
 }
 #maintenanceTable th,
 #maintenanceTable td {
-    border: 2px solid #283593;
-    padding: 16px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 1em;
-    word-break: break-word;
-    background-color: #f3f4f6;
+    border: 2px solid #283593; /* Borde azul */
+    padding: 16px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    vertical-align: middle; /* Centra verticalmente */
+    font-size: 1em; /* Tamaño de fuente */
+    word-break: break-word; /* Rompe palabras largas */
+    background-color: #f3f4f6; /* Fondo gris claro */
 }
 #maintenanceTable th {
-    background: linear-gradient(90deg, #d27219 100%);
-    color: #fff;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #d27219 100%); /* Fondo degradado naranja */
+    color: #fff; /* Texto blanco */
+    font-weight: 700; /* Negrita */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
 }
 #maintenanceTable tr:nth-child(even) td {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Fondo blanco para filas pares */
 }
 #maintenanceTable tr:hover td {
-    background-color: #e8f0fe;
-    transition: background 0.3s;
+    background-color: #e8f0fe; /* Fondo azul claro al pasar el mouse */
+    transition: background 0.3s; /* Transición suave */
 }
 
 /* Estilos responsivos para móviles */
 @media (max-width: 700px) {
     form, #maintenanceTable {
-        width: 99%;
-        padding: 8px;
+        width: 99%; /* Ancho casi completo */
+        padding: 8px; /* Espaciado interno reducido */
     }
     #maintenanceTable th, #maintenanceTable td {
-        font-size: 0.97em;
-        padding: 10px 5px;
+        font-size: 0.97em; /* Fuente más pequeña */
+        padding: 10px 5px; /* Espaciado reducido */
     }
     form {
-        padding: 18px 8px 18px 8px;
+        padding: 18px 8px 18px 8px; /* Espaciado reducido */
     }
     h1 {
-        font-size: 1.4em;
+        font-size: 1.4em; /* Título más pequeño */
     }
 }
