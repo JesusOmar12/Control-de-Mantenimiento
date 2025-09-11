@@ -89,7 +89,7 @@ button {
 button:hover {
     background: linear-gradient(90deg, #1976d2 0%, #f18101 100%); /* Degradado azul a naranja */
     transform: translateY(-2px) scale(1.04); /* Efecto de elevación */
-    box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10); /* Sombra más intensa */
+    box-shadow: 0 4px 18px rgb(226, 124, 8); /* Sombra más intensa */
 }
 
 /* Tabla de registros */
