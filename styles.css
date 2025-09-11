@@ -100,7 +100,7 @@ table {
     background: #fdfdfde5; /* Fondo blanco */
     border-radius: 14px; /* Bordes redondeados */
     overflow: hidden; /* Oculta desbordes */
-    box-shadow: 0 6px 32px rgb(247, 247, 247); /* Sombra */
+    box-shadow: 0 6px 32px rgb(192, 160, 160); /* Sombra */
     font-size: 1.04em; /* Tamaño de fuente */
     border: 3px solid #2a2d31; /* Borde suave */
 }
@@ -148,12 +148,12 @@ tr:last-child td {
 
 /* Fila par con fondo diferente */
 tr:nth-child(even) td {
-    background-color: #7daae4; /* Fondo azul muy claro */
+    background-color: #b3c6e0; /* Fondo azul muy claro */
 }
 
 /* Efecto hover en filas */
 tr:hover td {
-    background-color: #95aeec; /* Fondo azul claro */
+    background-color: #ffffff; /* Fondo azul claro */
     transition: background 0.2s; /* Transición suave */
 }
 
