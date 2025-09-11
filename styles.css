@@ -148,12 +148,12 @@ tr:last-child td {
 
 /* Fila par con fondo diferente */
 tr:nth-child(even) td {
-    background-color: #cad1db; /* Fondo azul muy claro */
+    background-color: #99c9db; /* Fondo azul muy claro */
 }
 
 /* Efecto hover en filas */
 tr:hover td {
-    background-color: #ffffff; /* Fondo azul claro */
+    background-color: #ffffff; /* Fondo blanco claro */
     transition: background 0.2s; /* Transición suave */
 }
 
