@@ -57,7 +57,7 @@ input, select {
 
 /* Efecto al enfocar los campos */
 input:focus, select:focus {
-    border-color: #3949ab; /* Borde azul */
+    border-color: #dfe2f0; /* Borde azul */
     outline: none; /* Sin contorno adicional */
     background: #fff; /* Fondo blanco */
     box-shadow: 0 0 0 2px #c5cae9; /* Sombra azul clara */
@@ -109,7 +109,7 @@ table {
 /* Asegura que todas las celdas y encabezados tengan el mismo tamaño y alineación */
 #maintenanceTable th,
 #maintenanceTable td {
-    width: 20%;              /* Cada columna ocupa el 20% del ancho de la tabla */
+    width: 10%;              /* Cada columna ocupa el 20% del ancho de la tabla */
     min-width: 120px;        /* Ancho mínimo para buena visualización */
     max-width: 1fr;          /* Permite que crezcan pero no se desborden */
     box-sizing: border-box;  /* Incluye el padding y el borde en el ancho */
