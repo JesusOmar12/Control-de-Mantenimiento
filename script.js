@@ -169,3 +169,71 @@ function renderTable() {
             }
         });
     
+        
+        // Cambiar entre login y registro
+        document.getElementById('showRegister').onclick = function() {
+            document.getElementById('loginContainer').style.display = 'none';
+            document.getElementById('registerContainer').style.display = 'block';
+        };
+        document.getElementById('showLogin').onclick = function() {
+            document.getElementById('registerContainer').style.display = 'none';
+            document.getElementById('loginContainer').style.display = 'block';
+        };
+
+        // Guardar usuarios en localStorage
+        function getUsuarios() {
+            return JSON.parse(localStorage.getItem('usuarios')) || [];
+        }
+        function setUsuarios(usuarios) {
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        }
+
+        // Registro de usuario
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nuevoUsuario = document.getElementById('nuevoUsuario').value.trim();
+            const nuevaContrasena = document.getElementById('nuevaContrasena').value.trim();
+            const errorDiv = document.getElementById('registerError');
+            const successDiv = document.getElementById('registerSuccess');
+            errorDiv.textContent = '';
+            successDiv.textContent = '';
+
+            if (nuevoUsuario.length < 3 || nuevaContrasena.length < 3) {
+                errorDiv.textContent = "El usuario y la contraseña deben tener al menos 3 caracteres.";
+                return;
+            }
+
+            let usuarios = getUsuarios();
+            if (usuarios.find(u => u.usuario === nuevoUsuario)) {
+                errorDiv.textContent = "El usuario ya existe.";
+                return;
+            }
+            usuarios.push({ usuario: nuevoUsuario, contrasena: nuevaContrasena });
+            setUsuarios(usuarios);
+            successDiv.textContent = "¡Usuario registrado exitosamente! Ahora puedes iniciar sesión.";
+            setTimeout(() => {
+                document.getElementById('registerContainer').style.display = 'none';
+                document.getElementById('loginContainer').style.display = 'block';
+            }, 1500);
+        });
+
+        // Login de usuario
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const usuario = document.getElementById('usuario').value.trim();
+            const contrasena = document.getElementById('contrasena').value.trim();
+            const errorDiv = document.getElementById('loginError');
+            errorDiv.textContent = '';
+
+            let usuarios = getUsuarios();
+            // También permite el usuario admin/1234 por defecto
+            const valido = (usuario === "admin" && contrasena === "1234") ||
+                usuarios.some(u => u.usuario === usuario && u.contrasena === contrasena);
+
+            if (valido) {
+                window.location.href = "index.html";
+            } else {
+                errorDiv.textContent = "Usuario o contraseña incorrectos.";
+            }
+        });
+    
