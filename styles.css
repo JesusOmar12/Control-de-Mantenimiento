@@ -110,13 +110,13 @@ button:hover {
     border-radius: 12px; /* Bordes redondeados */
     overflow: hidden; /* Oculta el desbordamiento */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Sombra */
-    font-size: 1.05em; /* Tamaño de fuente */
+    font-size: 1em; /* Tamaño de fuente */
     border: 2px solid #283593; /* Borde azul */
 }
 #maintenanceTable th,
 #maintenanceTable td {
     border: 2px solid #283593; /* Borde azul */
-    padding: 6px; /* Espaciado interno */
+    padding: 16px; /* Espaciado interno */
     text-align: center; /* Centra el texto */
     vertical-align: middle; /* Centra verticalmente */
     font-size: 1em; /* Tamaño de fuente */
