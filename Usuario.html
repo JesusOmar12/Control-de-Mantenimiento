@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autenticación de Usuario</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="module" src="Usuario.html"></script>
 </head>
 <body>
-    <div class="login-container">
+    <div class="login-container" id="loginContainer">
         <h2>Iniciar Sesión</h2>
         <form id="loginForm" autocomplete="off">
             <input type="text" id="usuario" placeholder="Usuario" required>
@@ -16,25 +15,19 @@
             <button type="submit">Ingresar</button>
             <div id="loginError" class="login-error"></div>
         </form>
+        <span class="toggle-link" id="showRegister">¿No tienes cuenta? Regístrate</span>
     </div>
-    <script>
-        // Usuario y contraseña de ejemplo (puedes cambiar estos valores)
-        const USUARIO_VALIDO = "admin";
-        const CONTRASENA_VALIDA = "1234";
-
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const usuario = document.getElementById('usuario').value.trim();
-            const contrasena = document.getElementById('contrasena').value.trim();
-            const errorDiv = document.getElementById('loginError');
-
-            if (usuario === USUARIO_VALIDO && contrasena === CONTRASENA_VALIDA) {
-                // Autenticación exitosa, redirige a la página principal
-                window.location.href = "index.html";
-            } else {
-                errorDiv.textContent = "Usuario o contraseña incorrectos.";
-            }
-        });
-    </script>
+    <div class="login-container" id="registerContainer">
+        <h2>Registrar Usuario</h2>
+        <form id="registerForm" autocomplete="off">
+            <input type="text" id="nuevoUsuario" placeholder="Nuevo usuario" required>
+            <input type="password" id="nuevaContrasena" placeholder="Nueva contraseña" required>
+            <button type="submit">Registrar</button>
+            <div id="registerError" class="login-error"></div>
+            <div id="registerSuccess"></div>
+        </form>
+        <span class="toggle-link" id="showLogin">¿Ya tienes cuenta? Inicia sesión</span>
+    </div>
+    
 </body>
 </html>

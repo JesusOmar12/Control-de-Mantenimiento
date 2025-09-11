@@ -287,3 +287,19 @@ button:hover {
         left: 0;
     }
 }
+
+
+
+        .toggle-link {
+            color: #1976d2;
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 0.98em;
+        }
+        .toggle-link:hover {
+            color: #f18101;
+        }
+    
