@@ -64,7 +64,7 @@ input:focus, select:focus {
 
 /* Estilo para los placeholders y selects inválidos */
 input::placeholder, select:invalid {
-    color: #b0bec5; /* Color gris claro */
+    color: #ffffff; /* Color blanco*/
     opacity: 1; /* Opacidad completa */
 }
 
