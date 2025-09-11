@@ -21,47 +21,47 @@ h1 {
 /* Contenedor del formulario */
 form {
     background: #fff;
-    max-width: 480px;
-    margin: 40px auto 32px auto;
-    padding: 36px 32px 32px 32px;
-    border-radius: 18px;
-    box-shadow: 0 6px 32px rgba(44, 62, 80, 0.10);
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 15px;
     border: 1px solid #424549;
 }
 
 /* Etiquetas del formulario */
-form label {
-    font-weight: 500;
-    color: #3949ab;
-    margin-bottom: 4px;
-    font-size: 1em;
-    letter-spacing: 0.2px;
+form label,
+label[for="nombre"], label[for="fecha"], label[for="tipo"] {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    font-size: 1.1em;
+    letter-spacing: 0.3px;
 }
 
 /* Campos de entrada y selectores */
-input, select {
-    padding: 13px 14px;
-    background: #f8fafc;
-    border: 1.5px solid #b0bec5;
-    border-radius: 7px;
-    font-size: 1.05em;
-    transition: border-color 0.2s, box-shadow 0.2s;
+input[type="text"], input[type="date"], select {
+    padding: 15px 16px;
+    background: #ffffff;
+    border: 2px solid #90caf9;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
     box-sizing: border-box;
 }
 
-/* Efecto al enfocar los campos */
-input:focus, select:focus {
-    border-color: #3a55ce;
+input[type="text"]:focus, input[type="date"]:focus, select:focus {
+    border-color: #1976d2;
     outline: none;
-    background: #fff;
+    box-shadow: 0 0 8px rgba(25, 118, 210, 0.2);
 }
 
 /* Estilo para los placeholders y selects inválidos */
-input::placeholder, select:invalid {
-    color: #ffffff;
+input[type="text"]::placeholder, input[type="date"]::placeholder, select:invalid {
+    color: #b0bec5;
     opacity: 1;
 }
 
@@ -69,70 +69,23 @@ input::placeholder, select:invalid {
 button {
     background: linear-gradient(90deg, #1976d2 100%);
     color: #fff;
-    padding: 13px;
+    padding: 14px;
     border: none;
-    border-radius: 7px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 12px;
-    font-size: 1.12em;
+    margin-top: 14px;
+    font-size: 1.15em;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
-    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+    letter-spacing: 0.6px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 3px 15px rgba(44, 62, 80, 0.1);
 }
 
 /* Efecto hover para el botón */
 button:hover {
-    background: linear-gradient(90deg, #1976d2 100%);
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 4px 18px rgb(226, 124, 8);
-}
-
-/* Tabla de registros */
-#maintenanceTable {
-    width: 96%;
-    margin: 0 auto 30px auto;
-    border-collapse: collapse;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 6px 32px #2a2d31;
-    font-size: 1.04em;
-    border: 2px solid #283593;
-}
-
-/* Mostrar todas las divisiones (bordes) de la tabla */
-#maintenanceTable th,
-#maintenanceTable td {
-    border: 2px solid #283593;
-    width: 20%;
-    min-width: 120px;
-    box-sizing: border-box;
-    text-align: center;
-    vertical-align: middle;
-    padding: 14px 10px;
-    font-size: 1em;
-    word-break: break-word;
-    background-color: #fff;
-}
-
-/* Encabezados de la tabla */
-#maintenanceTable th {
-    background: linear-gradient(90deg, #d27219 100%);
-    color: #fff;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-/* Fila par con fondo diferente */
-#maintenanceTable tr:nth-child(even) td {
-    background-color: #ffffff;
-}
-
-/* Efecto hover en filas */
-#maintenanceTable tr:hover td {
-    background-color: #ffffff;
-    transition: background 0.2s;
+    background: linear-gradient(90deg, #1565c0 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 20px rgb(226, 124, 8);
 }
 
 /* Botón de eliminar */
@@ -144,9 +97,44 @@ button:hover {
     cursor: pointer;
     transition: color 0.2s;
 }
-
 .eliminar:hover {
     color: #b71c1c;
+}
+
+/* Tabla de registros */
+#maintenanceTable {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    font-size: 1.05em;
+    border: 2px solid #283593;
+}
+#maintenanceTable th,
+#maintenanceTable td {
+    border: 2px solid #283593;
+    padding: 16px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1em;
+    word-break: break-word;
+    background-color: #f3f4f6;
+}
+#maintenanceTable th {
+    background: linear-gradient(90deg, #d27219 100%);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+#maintenanceTable tr:nth-child(even) td {
+    background-color: #ffffff;
+}
+#maintenanceTable tr:hover td {
+    background-color: #e8f0fe;
+    transition: background 0.3s;
 }
 
 /* Estilos responsivos para móviles */
@@ -166,4 +154,3 @@ button:hover {
         font-size: 1.4em;
     }
 }
-
