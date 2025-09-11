@@ -105,6 +105,20 @@ table {
     border: 3px solid #2a2d31; /* Borde suave */
 }
 
+/* Mostrar bordes visibles en toda la tabla */
+#maintenanceTable,
+#maintenanceTable th,
+#maintenanceTable td {
+    border: 2px solid #283593; /* Borde azul oscuro para toda la tabla y celdas */
+    border-collapse: collapse;  /* Colapsa los bordes para que no se dupliquen */
+}
+
+/* Ajusta el radio de la tabla para que los bordes sean visibles */
+#maintenanceTable {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 /* Asegura que todas las celdas y encabezados tengan el mismo tamaño y alineación */
 #maintenanceTable th,
 #maintenanceTable td {
