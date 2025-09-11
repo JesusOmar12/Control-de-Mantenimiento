@@ -30,7 +30,7 @@ form {
     flex-direction: column; /* Columnas */
     gap: 15px; /* Espacio entre elementos */
     border: 1px solid #424549; /* Borde gris */
-}
+}      
 
 /* Etiquetas del formulario */
 form label,
