@@ -5,7 +5,7 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif; /* Fuente principal */
     margin: 0; /* Elimina márgenes por defecto */
     padding: 0; /* Elimina relleno por defecto */
-    background: linear-gradient(120deg, #f5f7fa 0%, #6d93d1 100%); /* Fondo degradado */
+    background: linear-gradient(120deg, #f5f7fa 0%, #c3cfe2 100%); /* Fondo degradado */
     min-height: 100vh; /* Altura mínima de la ventana */
     color: #222; /* Color de texto principal */
 }
@@ -60,7 +60,7 @@ input:focus, select:focus {
     border-color: #3a55ce; /* Borde azul */
     outline: none; /* Sin contorno adicional */
     background: #fff; /* Fondo blanco */
-    box-shadow: 0 0 0 2px #60a9d3; /* Sombra azul clara */
+    box-shadow: 0 0 0 2px #70aacc; /* Sombra azul clara */
 }
 
 /* Estilo para los placeholders y selects inválidos */
