@@ -1,159 +1,178 @@
 /* Estilo profesional y corporativo mejorado */
 
+/* Estilos generales del cuerpo de la página */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(120deg, #f5f7fa 0%, #c3cfe2 100%);
-    min-height: 100vh;
-    color: #222;
+    font-family: 'Segoe UI', Arial, sans-serif; /* Fuente principal */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina relleno por defecto */
+    background: linear-gradient(120deg, #f5f7fa 0%, #c3cfe2 100%); /* Fondo degradado */
+    min-height: 100vh; /* Altura mínima de la ventana */
+    color: #222; /* Color de texto principal */
 }
 
+/* Título principal */
 h1 {
-    text-align: center;
-    margin-top: 40px;
-    color: #1a237e;
-    letter-spacing: 1.5px;
-    font-size: 2.4em;
-    font-weight: 700;
-    text-shadow: 0 2px 8px rgba(26,35,126,0.06);
+    text-align: center; /* Centra el texto */
+    margin-top: 40px; /* Espacio superior */
+    color: #1a237e; /* Color azul oscuro */
+    letter-spacing: 1.5px; /* Espaciado entre letras */
+    font-size: 2.4em; /* Tamaño de fuente grande */
+    font-weight: 700; /* Negrita */
+    text-shadow: 0 2px 8px rgba(26,35,126,0.06); /* Sombra suave */
 }
 
+/* Contenedor del formulario */
 form {
-    background: #fff;
-    max-width: 480px;
-    margin: 40px auto 32px auto;
-    padding: 36px 32px 32px 32px;
-    border-radius: 18px;
-    box-shadow: 0 6px 32px rgba(44, 62, 80, 0.10);
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    border: 1px solid #e3e7ed;
+    background: #fff; /* Fondo blanco */
+    max-width: 480px; /* Ancho máximo */
+    margin: 40px auto 32px auto; /* Centrado y separación */
+    padding: 36px 32px 32px 32px; /* Relleno interno */
+    border-radius: 18px; /* Bordes redondeados */
+    box-shadow: 0 6px 32px rgba(44, 62, 80, 0.10); /* Sombra */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Elementos en columna */
+    gap: 18px; /* Espacio entre elementos */
+    border: 1px solid #e3e7ed; /* Borde suave */
 }
 
+/* Etiquetas del formulario */
 form label {
-    font-weight: 500;
-    color: #3949ab;
-    margin-bottom: 4px;
-    font-size: 1em;
-    letter-spacing: 0.2px;
+    font-weight: 500; /* Seminegrita */
+    color: #3949ab; /* Color azul */
+    margin-bottom: 4px; /* Espacio inferior */
+    font-size: 1em; /* Tamaño estándar */
+    letter-spacing: 0.2px; /* Espaciado entre letras */
 }
 
+/* Campos de entrada y selectores */
 input, select {
-    padding: 13px 14px;
-    border: 1.5px solid #b0bec5;
-    border-radius: 7px;
-    font-size: 1.05em;
-    background: #f8fafc;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    box-sizing: border-box;
+    padding: 13px 14px; /* Relleno interno */
+    border: 1.5px solid #b0bec5; /* Borde gris */
+    border-radius: 7px; /* Bordes redondeados */
+    font-size: 1.05em; /* Tamaño de fuente */
+    background: #f8fafc; /* Fondo claro */
+    transition: border-color 0.2s, box-shadow 0.2s; /* Transiciones suaves */
+    box-sizing: border-box; /* Incluye borde y relleno en el tamaño */
 }
 
+/* Efecto al enfocar los campos */
 input:focus, select:focus {
-    border-color: #3949ab;
-    outline: none;
-    background: #fff;
-    box-shadow: 0 0 0 2px #c5cae9;
+    border-color: #3949ab; /* Borde azul */
+    outline: none; /* Sin contorno adicional */
+    background: #fff; /* Fondo blanco */
+    box-shadow: 0 0 0 2px #c5cae9; /* Sombra azul clara */
 }
 
+/* Estilo para los placeholders y selects inválidos */
 input::placeholder, select:invalid {
-    color: #b0bec5;
-    opacity: 1;
+    color: #b0bec5; /* Color gris claro */
+    opacity: 1; /* Opacidad completa */
 }
 
+/* Botón principal */
 button {
-    background: linear-gradient(90deg, #3949ab 0%, #1976d2 100%);
-    color: #fff;
-    padding: 13px;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    margin-top: 12px;
-    font-size: 1.12em;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
-    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+    background: linear-gradient(90deg, #3949ab 0%, #1976d2 100%); /* Degradado azul */
+    color: #fff; /* Texto blanco */
+    padding: 13px; /* Relleno */
+    border: none; /* Sin borde */
+    border-radius: 7px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano */
+    margin-top: 12px; /* Espacio superior */
+    font-size: 1.12em; /* Tamaño de fuente */
+    font-weight: 600; /* Negrita */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s; /* Transiciones suaves */
+    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07); /* Sombra */
 }
 
+/* Efecto hover para el botón */
 button:hover {
-    background: linear-gradient(90deg, #1976d2 0%, #f18101 100%);
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10);
+    background: linear-gradient(90deg, #1976d2 0%, #f18101 100%); /* Degradado azul a naranja */
+    transform: translateY(-2px) scale(1.04); /* Efecto de elevación */
+    box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10); /* Sombra más intensa */
 }
 
+/* Tabla de registros */
 table {
-    width: 96%;
-    margin: 0 auto 36px auto;
-    border-collapse: separate;
-    border-spacing: 0;
-    background: #fff;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 6px 32px rgba(44, 62, 80, 0.10);
-    font-size: 1.04em;
-    border: 1px solid #e3e7ed;
+    width: 96%; /* Ancho casi completo */
+    margin: 0 auto 36px auto; /* Centrado y separación inferior */
+    border-collapse: separate; /* Bordes separados */
+    border-spacing: 0; /* Sin espacio entre celdas */
+    background: #fff; /* Fondo blanco */
+    border-radius: 14px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta desbordes */
+    box-shadow: 0 6px 32px rgba(44, 62, 80, 0.10); /* Sombra */
+    font-size: 1.04em; /* Tamaño de fuente */
+    border: 1px solid #e3e7ed; /* Borde suave */
 }
 
+/* Celdas de la tabla */
 th, td {
-    border-bottom: 1px solid #e3e7ed;
-    padding: 18px 14px;
-    text-align: center;
-    vertical-align: middle;
+    border-bottom: 1px solid #e3e7ed; /* Línea inferior */
+    padding: 18px 14px; /* Relleno */
+    text-align: center; /* Centrado */
+    vertical-align: middle; /* Centrado vertical */
 }
 
+/* Encabezados de la tabla */
 th {
-    background: linear-gradient(90deg, #5b5e6e 0%, #d27219 100%);
-    color: #fff;
-    font-weight: 700;
-    border-right: 1px solid #283593;
-    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #5b5e6e 0%, #d27219 100%); /* Degradado gris a naranja */
+    color: #fff; /* Texto blanco */
+    font-weight: 700; /* Negrita */
+    border-right: 1px solid #283593; /* Línea derecha */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
 }
 
+/* Elimina el borde derecho en la última celda */
 th:last-child, td:last-child {
     border-right: none;
 }
 
+/* Elimina la línea inferior en la última fila */
 tr:last-child td {
     border-bottom: none;
 }
 
+/* Fila par con fondo diferente */
 tr:nth-child(even) td {
-    background-color: #f4f7fb;
+    background-color: #f4f7fb; /* Fondo azul muy claro */
 }
 
+/* Efecto hover en filas */
 tr:hover td {
-    background-color: #e3eafc;
-    transition: background 0.2s;
+    background-color: #e3eafc; /* Fondo azul claro */
+    transition: background 0.2s; /* Transición suave */
 }
 
+/* Botón de eliminar */
 .eliminar {
-    background: none;
-    border: none;
-    color: #d32f2f;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: color 0.2s;
-}
-.eliminar:hover {
-    color: #b71c1c;
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    color: #d32f2f; /* Rojo */
+    font-size: 1.2em; /* Tamaño de ícono */
+    cursor: pointer; /* Cursor de mano */
+    transition: color 0.2s; /* Transición de color */
 }
 
-/* Responsive para móviles */
+/* Efecto hover para el botón de eliminar */
+.eliminar:hover {
+    color: #b71c1c; /* Rojo más oscuro */
+}
+
+/* Estilos responsivos para móviles */
 @media (max-width: 700px) {
     form, table {
-        width: 99%;
-        padding: 8px;
+        width: 99%; /* Ancho casi completo */
+        padding: 8px; /* Relleno reducido */
     }
     th, td {
-        font-size: 0.97em;
-        padding: 10px 5px;
+        font-size: 0.97em; /* Fuente más pequeña */
+        padding: 10px 5px; /* Relleno reducido */
     }
     form {
-        padding: 18px 8px 18px 8px;
+        padding: 18px 8px 18px 8px; /* Relleno reducido */
     }
-        h1 {
-            font-size: 1.4em;
-        }
+    h1 {
+        font-size: 1.4em; /* Título más pequeño */
     }
+}
