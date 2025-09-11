@@ -98,10 +98,10 @@ table {
     margin: 0 auto 36px auto; /* Centrado y separación inferior */
     border-collapse: separate; /* Bordes separados */
     border-spacing: 0; /* Sin espacio entre celdas */
-    background: #1c2642e5; /* Fondo blanco */
+    background: #fdfdfde5; /* Fondo blanco */
     border-radius: 14px; /* Bordes redondeados */
     overflow: hidden; /* Oculta desbordes */
-    box-shadow: 0 6px 32px rgba(44, 62, 80, 0.10); /* Sombra */
+    box-shadow: 0 6px 32px rgb(247, 247, 247); /* Sombra */
     font-size: 1.04em; /* Tamaño de fuente */
     border: 3px solid #e3e7ed; /* Borde suave */
 }
