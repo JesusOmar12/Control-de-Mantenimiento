@@ -71,10 +71,17 @@ form.addEventListener('submit', function(e) {
 });
 
 function renderTable() {
-    tableBody.innerHTML = ''; // Limpia el cuerpo de la tabla antes de agregar filas nuevas
+    tableBody.innerHTML = '';
+    if (registros.length === 0) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td colspan="6" style="color:#888;">No hay registros de mantenimiento.</td>`;
+        tableBody.appendChild(tr);
+        return;
+    }
     registros.forEach((reg, idx) => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
+            <td>${idx + 1}</td>
             <td>${reg.nombre}</td>
             <td>${reg.serie}</td>
             <td>${reg.fecha}</td>
@@ -85,7 +92,6 @@ function renderTable() {
         `;
         tableBody.appendChild(tr);
     });
-    // Asignar eventos a los botones de eliminar
     document.querySelectorAll('.eliminar').forEach(btn => {
         btn.onclick = function() {
             const idx = this.getAttribute('data-idx');
@@ -95,3 +101,5 @@ function renderTable() {
         };
     });
 }
+
+// (Los estilos CSS han sido removidos del archivo JS. Colócalos en un archivo .css o en una etiqueta <style> en tu HTML.)
