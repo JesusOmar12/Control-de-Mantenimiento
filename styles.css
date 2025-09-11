@@ -14,7 +14,7 @@ body {
 h1 {
     text-align: center; /* Centra el texto */
     margin-top: 40px; /* Espacio superior */
-    color: #ffffff; /* Color blanco */
+    color: #fff; /* Color blanco para el título principal */
     letter-spacing: 1.5px; /* Espaciado entre letras */
     font-size: 2.4em; /* Tamaño de fuente grande */
     font-weight: 700; /* Negrita */
