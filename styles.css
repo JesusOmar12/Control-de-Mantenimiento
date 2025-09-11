@@ -95,7 +95,7 @@ button:hover {
 /* Tabla de registros */
 table {
     width: 96%; /* Ancho casi completo */
-    margin: 0 auto 36px auto; /* Centrado y separación inferior */
+    margin: 0 auto 30px auto; /* Centrado y separación inferior */
     border-collapse: separate; /* Bordes separados */
     border-spacing: 0; /* Sin espacio entre celdas */
     background: #fdfdfde5; /* Fondo blanco */
