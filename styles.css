@@ -32,7 +32,7 @@ form {
     display: flex; /* Usa flexbox */
     flex-direction: column; /* Elementos en columna */
     gap: 18px; /* Espacio entre elementos */
-    border: 1px solid #e3e7ed; /* Borde suave */
+    border: 1px solid #424549; /* Borde suave */
 }
 
 /* Etiquetas del formulario */
