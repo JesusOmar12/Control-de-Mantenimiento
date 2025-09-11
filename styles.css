@@ -5,7 +5,7 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif; /* Fuente principal */
     margin: 0; /* Elimina márgenes por defecto */
     padding: 0; /* Elimina relleno por defecto */
-    background: linear-gradient(120deg, #f5f7fa 0%, #618acc 100%); /* Fondo degradado */
+    background: linear-gradient(120deg, #2c4e81 0%, #618acc 100%); /* Fondo degradado */
     min-height: 100vh; /* Altura mínima de la ventana */
     color: #222; /* Color de texto principal */
 }
