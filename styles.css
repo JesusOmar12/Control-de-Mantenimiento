@@ -105,12 +105,23 @@ table {
     border: 3px solid #2a2d31; /* Borde suave */
 }
 
-/* Mostrar bordes visibles en toda la tabla */
+/* Mostrar todas las divisiones (bordes) de la tabla */
 #maintenanceTable,
 #maintenanceTable th,
-#maintenanceTable td {
-    border: 2px solid #283593; /* Borde azul oscuro para toda la tabla y celdas */
-    border-collapse: collapse;  /* Colapsa los bordes para que no se dupliquen */
+#maintenanceTable td,
+#maintenanceTable tr {
+    border: 2px solid #283593 !important; /* Borde azul oscuro para todas las divisiones */
+    border-collapse: collapse !important;  /* Colapsa los bordes para que no se dupliquen */
+}
+
+/* Elimina el borde derecho en la última celda solo si lo deseas, si no, puedes quitar esta regla */
+th:last-child, td:last-child {
+    border-right: 2px solid #283593 !important;
+}
+
+/* Elimina la línea inferior en la última fila solo si lo deseas, si no, puedes quitar esta regla */
+tr:last-child td {
+    border-bottom: 2px solid #283593 !important;
 }
 
 /* Ajusta el radio de la tabla para que los bordes sean visibles */
