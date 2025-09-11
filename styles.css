@@ -178,7 +178,7 @@ tr:nth-child(even) td {
 
 /* Efecto hover en filas */
 tr:hover td {
-    background-color: #f0f0f0; /* Fondo gris claro */
+    background-color: #ffffff; /* Fondo blanco*/
     transition: background 0.2s; /* Transición suave */
 }
 
