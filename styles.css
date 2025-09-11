@@ -60,7 +60,6 @@ input:focus, select:focus {
     border-color: #3a55ce; /* Borde azul */
     outline: none; /* Sin contorno adicional */
     background: #fff; /* Fondo blanco */
-    box-shadow: 0 0 0 2px #70aacc; /* Sombra azul clara */
 }
 
 /* Estilo para los placeholders y selects inválidos */
