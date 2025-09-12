@@ -140,7 +140,7 @@ button:hover {
 /* Estilos responsivos para móviles */
 @media (max-width: 700px) {
     form, #maintenanceTable {
-        width: 100%; /* Ancho completo */
+        width: 80%; /* Ancho casi completo */
         padding: 8px; /* Espaciado interno reducido */
     }
     #maintenanceTable th, #maintenanceTable td {
