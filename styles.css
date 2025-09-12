@@ -96,7 +96,7 @@ button:hover {
     font-size: 1em; /* Tamaño de fuente reducido */
     cursor: pointer; /* Cursor de mano */
     transition: color 0.2s; /* Transición de color */
-    padding: 2px 6px; /* Menos espaciado interno */
+    padding: 6px 6px; /* Menos espaciado interno */
 }
 .eliminar:hover {
     color: #b71c1c; /* Rojo más oscuro al pasar el mouse */
