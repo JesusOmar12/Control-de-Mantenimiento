@@ -93,9 +93,10 @@ button:hover {
     background: none; /* Sin fondo */
     border: none; /* Sin borde */
     color: #d32f2f; /* Rojo */
-    font-size: 1.2em; /* Tamaño de fuente */
+    font-size: 1em; /* Tamaño de fuente reducido */
     cursor: pointer; /* Cursor de mano */
     transition: color 0.2s; /* Transición de color */
+    padding: 2px 6px; /* Menos espaciado interno */
 }
 .eliminar:hover {
     color: #b71c1c; /* Rojo más oscuro al pasar el mouse */
@@ -116,12 +117,15 @@ button:hover {
 #maintenanceTable th,
 #maintenanceTable td {
     border: 2px solid #283593; /* Borde azul */
-    padding: 6px 2px; /* Espaciado interno más pequeño */
+    padding: 6px 4px;      /* Menos espacio interno */
     text-align: center; /* Centra el texto */
     vertical-align: middle; /* Centra verticalmente */
-    font-size: 0.95em; /* Tamaño de fuente ligeramente más pequeño */
+    font-size: 0.92em;     /* Fuente más pequeña */
     word-break: break-word; /* Rompe palabras largas */
     background-color: #f3f4f6; /* Fondo gris claro */
+    min-width: 60px;       /* Ancho mínimo reducido */
+    max-width: 160px;      /* Ancho máximo reducido */
+    line-height: 1.2;      /* Menor altura de línea */
 }
 #maintenanceTable th {
     background: linear-gradient(90deg, #d27219 100%); /* Fondo degradado naranja */
