@@ -144,7 +144,7 @@ button:hover {
         padding: 8px; /* Espaciado interno reducido */
     }
     #maintenanceTable th, #maintenanceTable td {
-        font-size: 0.97em; /* Fuente más pequeña */
+        font-size: 0.90em; /* Fuente más pequeña */
         padding: 10px 5px; /* Espaciado reducido */
     }
     form {
