@@ -83,7 +83,7 @@ button {
 
 /* Efecto hover para el botón */
 button:hover {
-    background: linear-gradient(90deg, #1565c0 100%); /* Cambia el degradado */
+    background: linear-gradient(90deg, #ff3300 100%); /* Cambia el degradado */
     transform: translateY(-3px) scale(1.05); /* Eleva y agranda el botón */
     box-shadow: 0 5px 20px rgb(226, 124, 8); /* Sombra naranja */
 }
@@ -112,7 +112,7 @@ button:hover {
     overflow: hidden; /* Oculta el desbordamiento */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Sombra */
     font-size: 1.05em; /* Tamaño de fuente */
-    border: 2px solid #283593; /* Borde azul */
+    border: 2px solid #283593; /* Borde azul */   
 }
 #maintenanceTable th,
 #maintenanceTable td {
