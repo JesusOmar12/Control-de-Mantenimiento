@@ -74,6 +74,8 @@ form.addEventListener('submit', function(e) {
 
 // Función para mostrar solo los registros guardados en la tabla
 function renderTable() {
+    // Siempre lee los registros actuales del localStorage
+    registros = JSON.parse(localStorage.getItem('mantenimientos')) || [];
     tableBody.innerHTML = '';
     if (registros.length === 0) {
         const tr = document.createElement('tr');
@@ -94,6 +96,7 @@ function renderTable() {
         `;
         tableBody.appendChild(tr);
     });
+    // Asignar eventos a los botones de eliminar
     document.querySelectorAll('.eliminar').forEach(btn => {
         btn.onclick = function() {
             const idx = this.getAttribute('data-idx');
