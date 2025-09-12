@@ -152,5 +152,5 @@ input[type="date"] {
 
 /* Cambia el color del texto del input de fecha cuando no hay valor */
 input[type="date"]:invalid {
-    color: #ffffff;
+    color: #000000;
 }
