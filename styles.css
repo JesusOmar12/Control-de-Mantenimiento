@@ -124,7 +124,7 @@ button:hover {
     word-break: break-word; /* Rompe palabras largas */
     background-color: #f3f4f6; /* Fondo gris claro */
     min-width: 60px;       /* Ancho mínimo reducido */
-    max-width: 160px;      /* Ancho máximo reducido */
+    max-width: 60px;      /* Ancho máximo reducido */
     line-height: 1.2;      /* Menor altura de línea */
 }
 #maintenanceTable th {
