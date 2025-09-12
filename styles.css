@@ -136,3 +136,16 @@ button:hover {
     background-color: #e8f0fe; /* Fondo azul claro al pasar el mouse */
     transition: background 0.3s; /* Transición suave */
 }
+
+/* Mejora visual para el input de fecha */
+input[type="date"] {
+    position: relative;
+    background: #ffffff url('data:image/svg+xml;utf8,<svg fill="gray" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zm0-13H5V6h14v1z"/></svg>') no-repeat right 12px center/22px 22px;
+    /* Icono de calendario a la derecha */
+    cursor: pointer;
+}
+
+/* Cambia el color del texto del input de fecha cuando no hay valor */
+input[type="date"]:invalid {
+    color: #636363;
+}
