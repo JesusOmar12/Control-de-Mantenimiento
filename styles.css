@@ -136,21 +136,3 @@ button:hover {
     background-color: #e8f0fe; /* Fondo azul claro al pasar el mouse */
     transition: background 0.3s; /* Transición suave */
 }
-
-/* Estilos responsivos para móviles */
-@media (max-width: 700px) {
-    form, #maintenanceTable {
-        width: 80%; /* Ancho casi completo */
-        padding: 8px; /* Espaciado interno reducido */
-    }
-    #maintenanceTable th, #maintenanceTable td {
-        font-size: 0.95em; /* Fuente más pequeña */
-        padding: 10px 5px; /* Espaciado reducido */
-    }
-    form {
-        padding: 8px 8px 8px 8px; /* Espaciado reducido */
-    }
-    h1 {
-        font-size: 1.4em; /* Título más pequeño */
-    }
-}
