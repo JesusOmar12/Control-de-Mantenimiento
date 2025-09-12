@@ -67,7 +67,7 @@ input[type="text"]::placeholder, input[type="date"]::placeholder, select:invalid
 
 /* Botón principal */
 button {
-    background: linear-gradient(90deg, #1976d2 100%); /* Fondo degradado azul */
+    background: linear-gradient(90deg, #f0a505 100%); /* Fondo degradado azul */
     color: #fff; /* Texto blanco */
     padding: 14px; /* Espaciado interno */
     border: none; /* Sin borde */
