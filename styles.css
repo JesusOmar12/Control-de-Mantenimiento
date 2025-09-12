@@ -145,9 +145,6 @@ input[type="date"] {
     position: relative;
     padding-right: 36px; /* Espacio para el icono */
     cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none; /* Oculta el icono nativo en la mayoría de navegadores */
 }
 
 /* Cambia el color del texto del input de fecha cuando no hay valor */
