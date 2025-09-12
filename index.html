@@ -12,7 +12,15 @@
 
 <!-- Formulario para registrar el mantenimiento de equipos -->
 <form id="equipmentForm">
-    <input type="text" id="Nombre_del_Equipo" placeholder="Nombre del Equipo" required> <!-- Campo para el nombre del equipo -->
+    <!-- Cambia el input por un select con opciones para el nombre del equipo -->
+    <label for="Nombre_del_Equipo">Nombre del Equipo</label>
+    <select id="Nombre_del_Equipo" required>
+        <option value="" disabled selected>Seleccione el equipo</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Impresora">Impresora</option>
+        <option value="Gabinete">Gabinete</option>
+        <option value="Monitor">Motor</option>
+    </select>
     <input type="text" id="Número_de_Serie" placeholder="Número de Serie" required> <!-- Campo para el número de serie -->
     <input type="date" id="Fecha_de_Mantenimiento" placeholder="Fecha de Mantenimiento" required> <!-- Campo para la fecha de mantenimiento -->
     <!-- Cambia el input de tipo de mantenimiento por un select con opciones -->
@@ -21,9 +29,7 @@
         <option value="" disabled selected>Seleccione el tipo de mantenimiento</option>
         <option value="Preventivo">Preventivo</option>
         <option value="Correctivo">Correctivo</option>
-        <option value="Predictivo">Predictivo</option>
         <option value="Urgente">Urgente</option>
-        <option value="Otro">Otro</option>
     </select>
     <button type="submit">Registrar Mantenimiento</button> <!-- Botón para enviar el formulario -->
 </form>
