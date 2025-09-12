@@ -120,7 +120,6 @@ button:hover {
     text-align: center; /* Centra el texto */
     vertical-align: middle; /* Centra verticalmente */
     font-size: 0.90em;     /* Fuente más pequeña */
-    word-break: break-word; /* Rompe palabras largas */
     background-color: #f3f4f6; /* Fondo gris claro */
     min-width: 60px;       /* Ancho mínimo reducido */
     max-width: 60px;      /* Ancho máximo reducido */
