@@ -49,6 +49,7 @@ document.getElementById('equipmentForm').addEventListener('submit', async functi
     }
 });
 
+// Obtener referencias al formulario y la tabla
 const form = document.getElementById('equipmentForm');
 const tableBody = document.querySelector('#maintenanceTable tbody');
 
@@ -56,6 +57,7 @@ const tableBody = document.querySelector('#maintenanceTable tbody');
 let registros = JSON.parse(localStorage.getItem('mantenimientos')) || [];
 renderTable();
 
+// Evento para registrar un nuevo mantenimiento
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     const registro = {
@@ -66,15 +68,16 @@ form.addEventListener('submit', function(e) {
     };
     registros.push(registro);
     localStorage.setItem('mantenimientos', JSON.stringify(registros));
-    renderTable(); // Solo se llama una vez aquí
+    renderTable();
     form.reset();
 });
 
+// Función para mostrar solo los registros guardados en la tabla
 function renderTable() {
-    tableBody.innerHTML = ''; // Limpia el cuerpo de la tabla antes de agregar filas nuevas
+    tableBody.innerHTML = '';
     if (registros.length === 0) {
         const tr = document.createElement('tr');
-        tr.innerHTML = `<td colspan="6" style="color:#888;">No hay registros de mantenimiento.</td>`;
+        tr.innerHTML = `<td colspan="5" style="color:#888;">No hay registros de mantenimiento.</td>`;
         tableBody.appendChild(tr);
         return;
     }
@@ -91,6 +94,7 @@ function renderTable() {
         `;
         tableBody.appendChild(tr);
     });
+    // Asignar eventos a los botones de eliminar
     document.querySelectorAll('.eliminar').forEach(btn => {
         btn.onclick = function() {
             const idx = this.getAttribute('data-idx');
