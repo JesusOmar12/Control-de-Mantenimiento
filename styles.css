@@ -127,7 +127,7 @@ button:hover {
     line-height: 1.2;      /* Menor altura de línea */
 }
 #maintenanceTable th {
-    background: linear-gradient(90deg, #d27219 100%); /* Fondo degradado naranja */
+    background: linear-gradient(90deg, #ff3300 100%); /* Fondo degradado naranja */
     color: #fff; /* Texto blanco */
     font-weight: 700; /* Negrita */
     letter-spacing: 0.5px; /* Espaciado entre letras */
