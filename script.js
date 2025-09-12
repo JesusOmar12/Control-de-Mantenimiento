@@ -94,7 +94,6 @@ function renderTable() {
         `;
         tableBody.appendChild(tr);
     });
-    // Asignar eventos a los botones de eliminar
     document.querySelectorAll('.eliminar').forEach(btn => {
         btn.onclick = function() {
             const idx = this.getAttribute('data-idx');
