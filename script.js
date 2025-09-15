@@ -21,17 +21,45 @@ const db = getDatabase(app);
 // Referencia a la tabla y formulario
 const form = document.getElementById('equipmentForm');
 const tableBody = document.querySelector('#maintenanceTable tbody');
+const dashboardStats = document.getElementById('dashboard-stats');
+
+// Actualizar el dashboard con estadísticas
+function updateDashboard(data) {
+    const totalRecords = Object.keys(data).length;
+    const maintenanceTypes = {};
+
+    for (const key in data) {
+        const type = data[key].Tipo_de_Mantenimiento;
+        if (maintenanceTypes[type]) {
+            maintenanceTypes[type]++;
+        } else {
+            maintenanceTypes[type] = 1;
+        }
+    }
+
+    let statsHTML = `<p><strong>Total de Registros:</strong> ${totalRecords}</p>`;
+    statsHTML += `<p><strong>Desglose por Tipo:</strong></p><ul>`;
+    for (const type in maintenanceTypes) {
+        statsHTML += `<li>${type}: ${maintenanceTypes[type]}</li>`;
+    }
+    statsHTML += `</ul>`;
+
+    dashboardStats.innerHTML = statsHTML;
+}
 
 // Mostrar los registros de Firebase en la tabla
 function renderTableFirebase(snapshot) {
     tableBody.innerHTML = '';
     if (!snapshot.exists()) {
+        dashboardStats.innerHTML = '<p>No hay datos para mostrar en el dashboard.</p>';
         const tr = document.createElement('tr');
         tr.innerHTML = `<td colspan="5" style="color:#888;">No hay registros de mantenimiento.</td>`;
         tableBody.appendChild(tr);
         return;
     }
     const data = snapshot.val();
+    updateDashboard(data); // Actualiza el dashboard
+
     const keys = Object.keys(data);
     keys.forEach(key => {
         const reg = data[key];
