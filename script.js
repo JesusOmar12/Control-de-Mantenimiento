@@ -35,17 +35,11 @@ function renderTableFirebase(snapshot) {
     const keys = Object.keys(data);
     keys.forEach(key => {
         const reg = data[key];
-
-        // Formatear la fecha
-        const fecha = new Date(reg.Fecha_de_Mantenimiento);
-        const opciones = { day: '2-digit', month: '2-digit', year: 'numeric' };
-        const fechaFormateada = fecha.toLocaleDateString('es-MX', opciones);
-
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>${reg.Nombre_del_Equipo}</td>
             <td>${reg.Número_de_Serie}</td>
-            <td>${fechaFormateada}</td>
+            <td>${reg.Fecha_de_Mantenimiento}</td>
             <td>${reg.Tipo_de_Mantenimiento}</td>
             <td>
                 <button class="eliminar" data-key="${key}" title="Eliminar registro">🗑️</button>
