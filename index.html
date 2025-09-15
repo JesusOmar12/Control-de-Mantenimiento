@@ -13,7 +13,10 @@
 <!-- Sección para el Dashboard -->
 <div id="dashboard">
     <h2>Dashboard</h2>
-    <div id="dashboard-stats"></div>
+    <div class="dashboard-container">
+        <div id="dashboard-stats"></div>
+        <canvas id="maintenanceChart"></canvas>
+    </div>
 </div>
 
 <!-- Formulario para registrar el mantenimiento de equipos -->
@@ -58,5 +61,6 @@
 </table>
 
 <script type="module" src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Incluye Chart.js -->
 </body>
 </html>
