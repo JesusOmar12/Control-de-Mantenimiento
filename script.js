@@ -23,8 +23,6 @@ const form = document.getElementById('equipmentForm');
 const tableBody = document.querySelector('#maintenanceTable tbody');
 const dashboardStats = document.getElementById('dashboard-stats');
 
-let maintenanceChart = null; // Variable para almacenar la instancia del gráfico
-
 // Actualizar el dashboard con estadísticas
 function updateDashboard(data) {
     const totalRecords = Object.keys(data).length;
@@ -47,49 +45,13 @@ function updateDashboard(data) {
     statsHTML += `</ul>`;
 
     dashboardStats.innerHTML = statsHTML;
-
-    // --- Lógica para el gráfico ---
-    const chartCanvas = document.getElementById('maintenanceChart').getContext('2d');
-    const chartLabels = Object.keys(maintenanceTypes);
-    const chartData = Object.values(maintenanceTypes);
-
-    // Si ya existe un gráfico, lo destruimos antes de crear uno nuevo
-    if (maintenanceChart) {
-        maintenanceChart.destroy();
-    }
-
-    // Creamos una nueva instancia del gráfico
-    maintenanceChart = new Chart(chartCanvas, {
-        type: 'doughnut', // Tipo de gráfico
-        data: {
-            labels: chartLabels,
-            datasets: [{
-                label: 'Tipos de Mantenimiento',
-                data: chartData,
-                backgroundColor: [ // Colores para cada sección del gráfico
-                    'rgba(255, 99, 132, 0.7)',
-                    'rgba(54, 162, 235, 0.7)',
-                    'rgba(255, 206, 86, 0.7)',
-                    'rgba(75, 192, 192, 0.7)',
-                    'rgba(153, 102, 255, 0.7)',
-                ],
-                borderColor: [ // Colores de los bordes
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                ],
-                borderWidth: 1
-            }]
-        }
-    });
 }
 
 // Mostrar los registros de Firebase en la tabla
 function renderTableFirebase(snapshot) {
     tableBody.innerHTML = '';
     if (!snapshot.exists()) {
+        dashboardStats.innerHTML = '<p>No hay datos para mostrar en el dashboard.</p>';
         const tr = document.createElement('tr');
         tr.innerHTML = `<td colspan="5" style="color:#888;">No hay registros de mantenimiento.</td>`;
         tableBody.appendChild(tr);
