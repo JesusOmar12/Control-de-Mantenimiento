@@ -35,11 +35,17 @@ function renderTableFirebase(snapshot) {
     const keys = Object.keys(data);
     keys.forEach(key => {
         const reg = data[key];
+
+        // Formatear la fecha
+        const fecha = new Date(reg.Fecha_de_Mantenimiento);
+        const opciones = { day: '2-digit', month: '2-digit', year: 'numeric' };
+        const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>${reg.Nombre_del_Equipo}</td>
             <td>${reg.Número_de_Serie}</td>
-            <td>${reg.Fecha_de_Mantenimiento}</td>
+            <td>${fechaFormateada}</td>
             <td>${reg.Tipo_de_Mantenimiento}</td>
             <td>
                 <button class="eliminar" data-key="${key}" title="Eliminar registro">🗑️</button>
@@ -82,4 +88,52 @@ form.addEventListener('submit', async function (event) {
     } catch (error) {
         alert('Error al guardar en Firebase: ' + error.message);
     }
-});
+}); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Mostrar los registros de Firebase en la tabla
+function renderTableFirebase(snapshot) {
+    tableBody.innerHTML = '';
+    if (!snapshot.exists()) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td colspan="5" style="color:#888;">No hay registros de mantenimiento.</td>`;
+        tableBody.appendChild(tr);
+        return;
+    }
+    const data = snapshot.val();
+    const keys = Object.keys(data);
+    keys.forEach(key => {
+        const reg = data[key];
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${reg.Nombre_del_Equipo}</td>
+            <td>${reg.Número_de_Serie}</td>
+            <td>${reg.Fecha_de_Mantenimiento}</td>
+            <td>${reg.Tipo_de_Mantenimiento}</td>
+            <td>
+                <button class="eliminar" data-key="${key}" title="Eliminar registro">🗑️</button>
+            </td>
+        `;
+        tableBody.appendChild(tr);
+    });
+
+    // Asignar eventos a los botones de eliminar
+    document.querySelectorAll('.eliminar').forEach(btn => {
+        btn.onclick = function() {
+            const key = this.getAttribute('data-key');
+            remove(ref(db, 'mantenimientos/' + key));
+        };
+    });
+}
