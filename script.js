@@ -39,7 +39,7 @@ function renderTableFirebase(snapshot) {
         // Formatear la fecha
         const fecha = new Date(reg.Fecha_de_Mantenimiento);
         const opciones = { day: '2-digit', month: '2-digit', year: 'numeric' };
-        const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+        const fechaFormateada = fecha.toLocaleDateString('es-MX', opciones);
 
         const tr = document.createElement('tr');
         tr.innerHTML = `
