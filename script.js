@@ -29,7 +29,7 @@ function renderTableFirebase(snapshot) {
     tableBody.innerHTML = '';
     if (!snapshot.exists()) {
         const tr = document.createElement('tr');
-        tr.innerHTML = `<td colspan="6" style="color:#888;">No hay registros de mantenimiento.</td>`;
+        tr.innerHTML = `<td colspan="5" style="color:#888;">No hay registros de mantenimiento.</td>`;
         tableBody.appendChild(tr);
         return;
     }
@@ -41,7 +41,6 @@ function renderTableFirebase(snapshot) {
         tr.innerHTML = `
             <td>${reg.Nombre_del_Equipo}</td>
             <td>${reg.Número_de_Serie}</td>
-            <td>${reg.Descripcion || ''}</td>
             <td>${reg.Fecha_de_Mantenimiento}</td>
             <td>${reg.Tipo_de_Mantenimiento}</td>
             <td>
@@ -71,7 +70,6 @@ form.addEventListener('submit', async function (event) {
     const Nombre_del_Equipo = document.getElementById('Nombre_del_Equipo').value;
     const Número_de_Serie = document.getElementById('Número_de_Serie').value;
     const Fecha_de_Mantenimiento = document.getElementById('Fecha_de_Mantenimiento').value;
-    const Descripcion = document.getElementById('Descripcion').value;
     const Tipo_de_Mantenimiento = document.getElementById('Tipo_de_Mantenimiento').value;
 
     // Guarda los datos en Firebase Realtime Database
@@ -79,7 +77,6 @@ form.addEventListener('submit', async function (event) {
         await push(ref(db, 'mantenimientos'), {
             Nombre_del_Equipo,
             Número_de_Serie,
-            Descripcion,
             Fecha_de_Mantenimiento,
             Tipo_de_Mantenimiento
         });
