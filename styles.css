@@ -18,29 +18,6 @@ h1 {
     font-weight: 700; /* Negrita */
 }
 
-/* Estilos para el Dashboard */
-#dashboard {
-    background: #fff;
-    max-width: 95%;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
-    border: 1px solid #424549;
-}
-
-#dashboard h2 {
-    text-align: center;
-    margin-top: 0;
-    color: #333;
-}
-
-.dashboard-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 /* Contenedor del formulario */
 form {
     background: #fff; /* Fondo blanco */
@@ -114,7 +91,7 @@ button:hover {
 /* Botón de eliminar */
 .eliminar {
     background: none; /* Sin fondo */
-    border: none; /* Sin borde */
+    border: none; /* Sin borde */    
     color: #d32f2f; /* Rojo */
     font-size: 1em; /* Tamaño de fuente reducido */
     cursor: pointer; /* Cursor de mano */
