@@ -29,7 +29,7 @@ function renderTableFirebase(snapshot) {
     tableBody.innerHTML = '';
     if (!snapshot.exists()) {
         const tr = document.createElement('tr');
-        tr.innerHTML = `<td colspan="5" style="color:#888;">No hay registros de mantenimiento.</td>`;
+        tr.innerHTML = `<td colspan="6" style="color:#888;">No hay registros de mantenimiento.</td>`;
         tableBody.appendChild(tr);
         return;
     }
@@ -43,6 +43,7 @@ function renderTableFirebase(snapshot) {
             <td>${reg.Número_de_Serie}</td>
             <td>${reg.Fecha_de_Mantenimiento}</td>
             <td>${reg.Tipo_de_Mantenimiento}</td>
+            <td>${reg.Descripcion || ''}</td>
             <td>
                 <button class="eliminar" data-key="${key}" title="Eliminar registro">🗑️</button>
             </td>
@@ -71,6 +72,7 @@ form.addEventListener('submit', async function (event) {
     const Número_de_Serie = document.getElementById('Número_de_Serie').value;
     const Fecha_de_Mantenimiento = document.getElementById('Fecha_de_Mantenimiento').value;
     const Tipo_de_Mantenimiento = document.getElementById('Tipo_de_Mantenimiento').value;
+    const Descripcion = document.getElementById('Descripcion').value;
 
     // Guarda los datos en Firebase Realtime Database
     try {
@@ -78,7 +80,8 @@ form.addEventListener('submit', async function (event) {
             Nombre_del_Equipo,
             Número_de_Serie,
             Fecha_de_Mantenimiento,
-            Tipo_de_Mantenimiento
+            Tipo_de_Mantenimiento,
+            Descripcion
         });
         form.reset();
     } catch (error) {
